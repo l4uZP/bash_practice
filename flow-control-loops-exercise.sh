@@ -30,6 +30,11 @@ hash="VTJGc2RHVmtYMTl2ZnYyNTdUeERVRnBtQWVGNmFWWVUySG1wTXNmRi9rQT0K"
 #        $ echo "Some Text" | base64
 
 # <- For-Loop here
+for n in {1..28} 
+do
+    hash=$(echo $hash | base64)
+    echo $hash
+done
 
 # Check if $salt is empty
 if [[ ! -z "$salt" ]]
