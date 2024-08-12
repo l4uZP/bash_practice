@@ -32,9 +32,10 @@ hash="VTJGc2RHVmtYMTl2ZnYyNTdUeERVRnBtQWVGNmFWWVUySG1wTXNmRi9rQT0K"
 # <- For-Loop here
 for n in {1..28} 
 do
-    hash=$(echo $hash | base64)
-    echo $hash
+    var=$(echo $var | base64)
 done
+
+salt=$(echo $var | wc -c)
 
 # Check if $salt is empty
 if [[ ! -z "$salt" ]]
